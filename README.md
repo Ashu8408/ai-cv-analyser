@@ -94,3 +94,6 @@ Built with ❤️ using React Router.
 2. npm run dev
 
 // tailwind for styling, react router for routing, tsconfig aka typescript for type safety 
+
+pdf upload and convert to image completed
+got the text from the resume to analyse too
