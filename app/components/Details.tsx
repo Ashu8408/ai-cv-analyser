@@ -110,17 +110,6 @@ const Details = ({ feedback }: { feedback: Feedback }) => {
   return (
       <div className="flex flex-col gap-4 w-full">
         <Accordion>
-          <AccordionItem id="tone-style">
-            <AccordionHeader itemId="tone-style">
-              <CategoryHeader
-                  title="Tone & Style"
-                  categoryScore={feedback.toneAndStyle.score}
-              />
-            </AccordionHeader>
-            <AccordionContent itemId="tone-style">
-              <CategoryContent tips={feedback.toneAndStyle.tips} />
-            </AccordionContent>
-          </AccordionItem>
           <AccordionItem id="content">
             <AccordionHeader itemId="content">
               <CategoryHeader
@@ -132,6 +121,19 @@ const Details = ({ feedback }: { feedback: Feedback }) => {
               <CategoryContent tips={feedback.content.tips} />
             </AccordionContent>
           </AccordionItem>
+
+          <AccordionItem id="skills">
+            <AccordionHeader itemId="skills">
+              <CategoryHeader
+                  title="Skills"
+                  categoryScore={feedback.skills.score}
+              />
+            </AccordionHeader>
+            <AccordionContent itemId="skills">
+              <CategoryContent tips={feedback.skills.tips} />
+            </AccordionContent>
+          </AccordionItem>
+
           <AccordionItem id="structure">
             <AccordionHeader itemId="structure">
               <CategoryHeader
@@ -143,15 +145,16 @@ const Details = ({ feedback }: { feedback: Feedback }) => {
               <CategoryContent tips={feedback.structure.tips} />
             </AccordionContent>
           </AccordionItem>
-          <AccordionItem id="skills">
-            <AccordionHeader itemId="skills">
+          
+          <AccordionItem id="tone-style">
+            <AccordionHeader itemId="tone-style">
               <CategoryHeader
-                  title="Skills"
-                  categoryScore={feedback.skills.score}
+                  title="Tone & Style"
+                  categoryScore={feedback.toneAndStyle.score}
               />
             </AccordionHeader>
-            <AccordionContent itemId="skills">
-              <CategoryContent tips={feedback.skills.tips} />
+            <AccordionContent itemId="tone-style">
+              <CategoryContent tips={feedback.toneAndStyle.tips} />
             </AccordionContent>
           </AccordionItem>
         </Accordion>
