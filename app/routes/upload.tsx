@@ -96,7 +96,7 @@ const upload = () => {
         <Navbar />
 
         <section className="main-section">
-            <div className="page-heading py-16">
+            <div className="page-heading py-6">
                 <h1>Smart feedback for your dream job</h1>
                 {isProcessing ? (
                     <>
